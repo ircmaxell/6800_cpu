@@ -1,0 +1,14 @@
+[options]
+mode cover
+depth 10
+multiclock off
+
+[engines]
+smtbmc boolector
+
+[script]
+read_ilang core.il
+prep -top top
+
+[files]
+core.il

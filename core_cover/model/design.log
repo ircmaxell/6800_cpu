@@ -1,0 +1,655 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 UNKNOWN, clang 10.0.1 -fPIC -Os)
+
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing ILANG frontend.
+Input filename: core.il
+
+2. Executing PREP pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \core
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \core
+Removed 0 unused modules.
+Module top directly or indirectly contains formal properties -> setting "keep" attribute.
+Module core directly or indirectly contains formal properties -> setting "keep" attribute.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\core.$group_4'.
+Cleaned up 1 empty switch.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $group_18 in module core.
+Marked 1 switch rules as full_case in process $group_16 in module core.
+Marked 2 switch rules as full_case in process $group_15 in module core.
+Marked 2 switch rules as full_case in process $group_14 in module core.
+Marked 2 switch rules as full_case in process $group_12 in module core.
+Marked 2 switch rules as full_case in process $group_11 in module core.
+Marked 1 switch rules as full_case in process $group_10 in module core.
+Marked 1 switch rules as full_case in process $group_8 in module core.
+Marked 2 switch rules as full_case in process $group_6 in module core.
+Marked 1 switch rules as full_case in process $group_3 in module core.
+Marked 1 switch rules as full_case in process $group_2 in module core.
+Marked 1 switch rules as full_case in process $group_1 in module core.
+Marked 1 switch rules as full_case in process $group_0 in module core.
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\core.$group_38'.
+  Set init value: $sample$s$Rst$sync$4 = 1'0
+Found init rule in `\core.$group_37'.
+  Set init value: $sample$s$Rst$sync$3 = 1'0
+Found init rule in `\core.$group_36'.
+  Set init value: $sample$s$Rst$sync$2 = 1'0
+Found init rule in `\core.$group_35'.
+  Set init value: $sample$s$Rst$sync$1 = 1'0
+Found init rule in `\core.$group_34'.
+  Set init value: $sample$s$Din$ph1$2 = 8'00000000
+Found init rule in `\core.$group_33'.
+  Set init value: $sample$s$Din$ph1$1 = 8'00000000
+Found init rule in `\core.$group_32'.
+  Set init value: $sample$s$Addr$ph1$2 = 16'0000000000000000
+Found init rule in `\core.$group_31'.
+  Set init value: $sample$s$Addr$ph1$1 = 16'0000000000000000
+Found init rule in `\core.$group_29'.
+  Set init value: $assert$en$287 = 1'0
+  Set init value: $assert$check$288 = 1'0
+Found init rule in `\core.$group_27'.
+  Set init value: $assert$en$266 = 1'0
+  Set init value: $assert$check$267 = 1'0
+Found init rule in `\core.$group_25'.
+  Set init value: $assert$en$245 = 1'0
+  Set init value: $assert$check$246 = 1'0
+Found init rule in `\core.$group_23'.
+  Set init value: $assert$en$224 = 1'0
+  Set init value: $assert$check$225 = 1'0
+Found init rule in `\core.$group_21'.
+  Set init value: $assert$en$203 = 1'0
+  Set init value: $assert$check$204 = 1'0
+Found init rule in `\core.$group_19'.
+  Set init value: $assert$en = 1'0
+  Set init value: $assert$check = 1'0
+Found init rule in `\core.$group_18'.
+  Set init value: \halt_flag = 1'0
+Found init rule in `\core.$group_17'.
+  Set init value: \instr = 8'00000000
+Found init rule in `\core.$group_16'.
+  Set init value: \cycle = 4'0000
+Found init rule in `\core.$group_13'.
+  Set init value: \reset_state = 2'00
+Found init rule in `\core.$group_12'.
+  Set init value: \RW = 1'1
+Found init rule in `\core.$group_11'.
+  Set init value: \Addr = 16'0000000000000000
+Found init rule in `\core.$group_9'.
+  Set init value: \Dout = 8'00000000
+Found init rule in `\core.$group_8'.
+  Set init value: \tmp16 = 16'0000000000000000
+Found init rule in `\core.$group_7'.
+  Set init value: \tmp8 = 8'00000000
+Found init rule in `\core.$group_6'.
+  Set init value: \pc = 16'0000000000000000
+Found init rule in `\core.$group_5'.
+  Set init value: \sp = 16'0000000000000000
+Found init rule in `\core.$group_4'.
+  Set init value: \x = 8'00000000
+Found init rule in `\core.$group_3'.
+  Set init value: \b = 8'00000000
+Found init rule in `\core.$group_2'.
+  Set init value: \a = 8'00000000
+
+2.2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\core.$group_38'.
+     1/1: $sample$s$Rst$sync$4$next
+Creating decoders for process `\core.$group_37'.
+     1/1: $sample$s$Rst$sync$3$next
+Creating decoders for process `\core.$group_36'.
+     1/1: $sample$s$Rst$sync$2$next
+Creating decoders for process `\core.$group_35'.
+     1/1: $sample$s$Rst$sync$1$next
+Creating decoders for process `\core.$group_34'.
+     1/1: $sample$s$Din$ph1$2$next
+Creating decoders for process `\core.$group_33'.
+     1/1: $sample$s$Din$ph1$1$next
+Creating decoders for process `\core.$group_32'.
+     1/1: $sample$s$Addr$ph1$2$next
+Creating decoders for process `\core.$group_31'.
+     1/1: $sample$s$Addr$ph1$1$next
+Creating decoders for process `\core.$group_29'.
+     1/2: $assert$check$288$next
+     2/2: $assert$en$287$next
+Creating decoders for process `\core.$group_27'.
+     1/2: $assert$check$267$next
+     2/2: $assert$en$266$next
+Creating decoders for process `\core.$group_25'.
+     1/2: $assert$check$246$next
+     2/2: $assert$en$245$next
+Creating decoders for process `\core.$group_23'.
+     1/2: $assert$check$225$next
+     2/2: $assert$en$224$next
+Creating decoders for process `\core.$group_21'.
+     1/2: $assert$check$204$next
+     2/2: $assert$en$203$next
+Creating decoders for process `\core.$group_19'.
+     1/2: $assert$check$next
+     2/2: $assert$en$next
+Creating decoders for process `\core.$group_18'.
+     1/1: \halt_flag$next
+Creating decoders for process `\core.$group_17'.
+     1/1: \instr$next
+Creating decoders for process `\core.$group_16'.
+     1/1: \cycle$next
+Creating decoders for process `\core.$group_15'.
+     1/1: \end_instr_flag
+Creating decoders for process `\core.$group_14'.
+     1/1: \end_instr_addr
+Creating decoders for process `\core.$group_13'.
+     1/1: \reset_state$next
+Creating decoders for process `\core.$group_12'.
+     1/1: \RW$next
+Creating decoders for process `\core.$group_11'.
+     1/1: \Addr$next
+Creating decoders for process `\core.$group_10'.
+     1/1: \src16
+Creating decoders for process `\core.$group_9'.
+     1/1: \Dout$next
+Creating decoders for process `\core.$group_8'.
+     1/2: \tmp16$next [15:8]
+     2/2: \tmp16$next [7:0]
+Creating decoders for process `\core.$group_7'.
+     1/1: \tmp8$next
+Creating decoders for process `\core.$group_6'.
+     1/2: \pc$next [15:8]
+     2/2: \pc$next [7:0]
+Creating decoders for process `\core.$group_5'.
+     1/2: \sp$next [15:8]
+     2/2: \sp$next [7:0]
+Creating decoders for process `\core.$group_4'.
+     1/1: \x$next
+Creating decoders for process `\core.$group_3'.
+     1/1: \b$next
+Creating decoders for process `\core.$group_2'.
+     1/1: \a$next
+Creating decoders for process `\core.$group_1'.
+     1/1: \src8_2
+Creating decoders for process `\core.$group_0'.
+     1/1: \src8_1
+
+2.2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\core.$sample$s$Rst$sync$4' using process `\core.$group_38'.
+  created $dff cell `$procdff$336' with positive edge clock.
+Creating register for signal `\core.$sample$s$Rst$sync$3' using process `\core.$group_37'.
+  created $dff cell `$procdff$337' with positive edge clock.
+Creating register for signal `\core.$sample$s$Rst$sync$2' using process `\core.$group_36'.
+  created $dff cell `$procdff$338' with positive edge clock.
+Creating register for signal `\core.$sample$s$Rst$sync$1' using process `\core.$group_35'.
+  created $dff cell `$procdff$339' with positive edge clock.
+Creating register for signal `\core.$sample$s$Din$ph1$2' using process `\core.$group_34'.
+  created $dff cell `$procdff$340' with positive edge clock.
+Creating register for signal `\core.$sample$s$Din$ph1$1' using process `\core.$group_33'.
+  created $dff cell `$procdff$341' with positive edge clock.
+Creating register for signal `\core.$sample$s$Addr$ph1$2' using process `\core.$group_32'.
+  created $dff cell `$procdff$342' with positive edge clock.
+Creating register for signal `\core.$sample$s$Addr$ph1$1' using process `\core.$group_31'.
+  created $dff cell `$procdff$343' with positive edge clock.
+Creating register for signal `\core.$assert$en$287' using process `\core.$group_29'.
+  created $dff cell `$procdff$344' with positive edge clock.
+Creating register for signal `\core.$assert$check$288' using process `\core.$group_29'.
+  created $dff cell `$procdff$345' with positive edge clock.
+Creating register for signal `\core.$assert$en$266' using process `\core.$group_27'.
+  created $dff cell `$procdff$346' with positive edge clock.
+Creating register for signal `\core.$assert$check$267' using process `\core.$group_27'.
+  created $dff cell `$procdff$347' with positive edge clock.
+Creating register for signal `\core.$assert$en$245' using process `\core.$group_25'.
+  created $dff cell `$procdff$348' with positive edge clock.
+Creating register for signal `\core.$assert$check$246' using process `\core.$group_25'.
+  created $dff cell `$procdff$349' with positive edge clock.
+Creating register for signal `\core.$assert$en$224' using process `\core.$group_23'.
+  created $dff cell `$procdff$350' with positive edge clock.
+Creating register for signal `\core.$assert$check$225' using process `\core.$group_23'.
+  created $dff cell `$procdff$351' with positive edge clock.
+Creating register for signal `\core.$assert$en$203' using process `\core.$group_21'.
+  created $dff cell `$procdff$352' with positive edge clock.
+Creating register for signal `\core.$assert$check$204' using process `\core.$group_21'.
+  created $dff cell `$procdff$353' with positive edge clock.
+Creating register for signal `\core.$assert$en' using process `\core.$group_19'.
+  created $dff cell `$procdff$354' with positive edge clock.
+Creating register for signal `\core.$assert$check' using process `\core.$group_19'.
+  created $dff cell `$procdff$355' with positive edge clock.
+Creating register for signal `\core.\halt_flag' using process `\core.$group_18'.
+  created $dff cell `$procdff$356' with positive edge clock.
+Creating register for signal `\core.\instr' using process `\core.$group_17'.
+  created $dff cell `$procdff$357' with positive edge clock.
+Creating register for signal `\core.\cycle' using process `\core.$group_16'.
+  created $dff cell `$procdff$358' with positive edge clock.
+Creating register for signal `\core.\reset_state' using process `\core.$group_13'.
+  created $dff cell `$procdff$359' with positive edge clock.
+Creating register for signal `\core.\RW' using process `\core.$group_12'.
+  created $dff cell `$procdff$360' with positive edge clock.
+Creating register for signal `\core.\Addr' using process `\core.$group_11'.
+  created $dff cell `$procdff$361' with positive edge clock.
+Creating register for signal `\core.\Dout' using process `\core.$group_9'.
+  created $dff cell `$procdff$362' with positive edge clock.
+Creating register for signal `\core.\tmp16' using process `\core.$group_8'.
+  created $dff cell `$procdff$363' with positive edge clock.
+Creating register for signal `\core.\tmp8' using process `\core.$group_7'.
+  created $dff cell `$procdff$364' with positive edge clock.
+Creating register for signal `\core.\pc' using process `\core.$group_6'.
+  created $dff cell `$procdff$365' with positive edge clock.
+Creating register for signal `\core.\sp' using process `\core.$group_5'.
+  created $dff cell `$procdff$366' with positive edge clock.
+Creating register for signal `\core.\x' using process `\core.$group_4'.
+  created $dff cell `$procdff$367' with positive edge clock.
+Creating register for signal `\core.\b' using process `\core.$group_3'.
+  created $dff cell `$procdff$368' with positive edge clock.
+Creating register for signal `\core.\a' using process `\core.$group_2'.
+  created $dff cell `$procdff$369' with positive edge clock.
+
+2.2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `core.$group_38'.
+Removing empty process `core.$group_37'.
+Removing empty process `core.$group_36'.
+Removing empty process `core.$group_35'.
+Removing empty process `core.$group_34'.
+Removing empty process `core.$group_33'.
+Removing empty process `core.$group_32'.
+Removing empty process `core.$group_31'.
+Found and cleaned up 1 empty switch in `\core.$group_29'.
+Removing empty process `core.$group_29'.
+Found and cleaned up 1 empty switch in `\core.$group_27'.
+Removing empty process `core.$group_27'.
+Found and cleaned up 1 empty switch in `\core.$group_25'.
+Removing empty process `core.$group_25'.
+Found and cleaned up 1 empty switch in `\core.$group_23'.
+Removing empty process `core.$group_23'.
+Found and cleaned up 1 empty switch in `\core.$group_21'.
+Removing empty process `core.$group_21'.
+Found and cleaned up 1 empty switch in `\core.$group_19'.
+Removing empty process `core.$group_19'.
+Found and cleaned up 10 empty switches in `\core.$group_18'.
+Removing empty process `core.$group_18'.
+Found and cleaned up 2 empty switches in `\core.$group_17'.
+Removing empty process `core.$group_17'.
+Found and cleaned up 6 empty switches in `\core.$group_16'.
+Removing empty process `core.$group_16'.
+Found and cleaned up 9 empty switches in `\core.$group_15'.
+Removing empty process `core.$group_15'.
+Found and cleaned up 9 empty switches in `\core.$group_14'.
+Removing empty process `core.$group_14'.
+Found and cleaned up 2 empty switches in `\core.$group_13'.
+Removing empty process `core.$group_13'.
+Found and cleaned up 10 empty switches in `\core.$group_12'.
+Removing empty process `core.$group_12'.
+Found and cleaned up 10 empty switches in `\core.$group_11'.
+Removing empty process `core.$group_11'.
+Found and cleaned up 1 empty switch in `\core.$group_10'.
+Removing empty process `core.$group_10'.
+Found and cleaned up 2 empty switches in `\core.$group_9'.
+Removing empty process `core.$group_9'.
+Found and cleaned up 8 empty switches in `\core.$group_8'.
+Removing empty process `core.$group_8'.
+Found and cleaned up 2 empty switches in `\core.$group_7'.
+Removing empty process `core.$group_7'.
+Found and cleaned up 12 empty switches in `\core.$group_6'.
+Removing empty process `core.$group_6'.
+Found and cleaned up 4 empty switches in `\core.$group_5'.
+Removing empty process `core.$group_5'.
+Found and cleaned up 3 empty switches in `\core.$group_4'.
+Removing empty process `core.$group_4'.
+Found and cleaned up 5 empty switches in `\core.$group_3'.
+Removing empty process `core.$group_3'.
+Found and cleaned up 6 empty switches in `\core.$group_2'.
+Removing empty process `core.$group_2'.
+Found and cleaned up 1 empty switch in `\core.$group_1'.
+Removing empty process `core.$group_1'.
+Found and cleaned up 1 empty switch in `\core.$group_0'.
+Removing empty process `core.$group_0'.
+Cleaned up 109 empty switches.
+
+2.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+Optimizing module core.
+<suppressed ~106 debug messages>
+
+2.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Finding unused cells or wires in module \core..
+Removed 31 unused cells and 244 unused wires.
+<suppressed ~38 debug messages>
+
+2.5. Executing CHECK pass (checking for obvious problems).
+checking module core..
+checking module top..
+found and reported 0 problems.
+
+2.6. Executing OPT pass (performing simple optimizations).
+
+2.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module core.
+Optimizing module top.
+
+2.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\core'.
+<suppressed ~411 debug messages>
+Finding identical cells in module `\top'.
+Removed a total of 137 cells.
+
+2.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$113.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 1 multiplexer ports.
+<suppressed ~32 debug messages>
+
+2.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \core.
+    New ctrl vector for $pmux cell $procmux$123: $auto$opt_reduce.cc:132:opt_mux$371
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$370: { $procmux$119_CMP $procmux$120_CMP }
+  Optimizing cells in module \core.
+  Optimizing cells in module \top.
+Performed a total of 2 changes.
+
+2.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\core'.
+<suppressed ~42 debug messages>
+Finding identical cells in module `\top'.
+Removed a total of 14 cells.
+
+2.6.6. Executing OPT_RMDFF pass (remove dff with constant values).
+Removing $procdff$362 ($dff) from module core.
+Promoting init spec \a = 8'00000000 to constant driver in module core.
+Promoting init spec \b = 8'00000000 to constant driver in module core.
+Promoting init spec \x = 8'00000000 to constant driver in module core.
+Promoting init spec \sp = 16'0000000000000000 to constant driver in module core.
+Promoted 4 init specs to constant drivers.
+Replaced 1 DFF cells.
+
+2.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \core..
+Finding unused cells or wires in module \top..
+Removed 1 unused cells and 153 unused wires.
+<suppressed ~3 debug messages>
+
+2.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module core.
+Optimizing module top.
+
+2.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~31 debug messages>
+
+2.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \core.
+    New ctrl vector for $pmux cell $procmux$130: { $procmux$138_CMP $auto$opt_reduce.cc:132:opt_mux$373 }
+    New ctrl vector for $pmux cell $procmux$219: { $procmux$138_CMP $auto$opt_reduce.cc:132:opt_mux$375 }
+    New ctrl vector for $pmux cell $procmux$246: { $procmux$138_CMP $auto$opt_reduce.cc:132:opt_mux$377 }
+    New ctrl vector for $pmux cell $procmux$28: { $procmux$107_CMP $auto$opt_reduce.cc:132:opt_mux$379 }
+    New ctrl vector for $pmux cell $procmux$73: { $procmux$111_CMP $procmux$107_CMP $auto$opt_reduce.cc:132:opt_mux$381 }
+    New ctrl vector for $pmux cell $procmux$97: { $procmux$111_CMP $procmux$107_CMP $auto$opt_reduce.cc:132:opt_mux$383 }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$372: { $procmux$104_CMP $procmux$101_CMP $procmux$107_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$374: { $procmux$104_CMP $procmux$101_CMP $procmux$107_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$376: { $procmux$104_CMP $procmux$101_CMP $procmux$107_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$378: { $procmux$29_CMP $procmux$104_CMP $procmux$101_CMP $procmux$111_CMP $procmux$138_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$380: { $procmux$29_CMP $procmux$104_CMP $procmux$101_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$382: { $procmux$29_CMP $procmux$104_CMP $procmux$101_CMP }
+  Optimizing cells in module \core.
+  Optimizing cells in module \top.
+Performed a total of 12 changes.
+
+2.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\core'.
+<suppressed ~9 debug messages>
+Finding identical cells in module `\top'.
+Removed a total of 3 cells.
+
+2.6.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \core..
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+2.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module core.
+Optimizing module top.
+
+2.6.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.6.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \core..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~31 debug messages>
+
+2.6.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \core.
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.6.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\core'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.6.20. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.6.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \core..
+Finding unused cells or wires in module \top..
+
+2.6.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module core.
+Optimizing module top.
+
+2.6.23. Finished OPT passes. (There is nothing left to do.)
+
+2.7. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 17) from port Y of cell core.$40 ($add).
+Removed top 3 bits (of 8) from port B of cell core.$procmux$29_CMP0 ($eq).
+Removed top 1 bits (of 8) from port B of cell core.$procmux$107_CMP0 ($eq).
+Removed top 7 bits (of 8) from port B of cell core.$procmux$111_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell core.$procmux$119_CMP0 ($eq).
+Removed top 1 bits (of 17) from wire core.$38.
+
+2.8. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+2.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \core..
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.11. Executing OPT pass (performing simple optimizations).
+
+2.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module core.
+Optimizing module top.
+
+2.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\core'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.11.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+2.11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \core..
+Finding unused cells or wires in module \top..
+
+2.11.5. Finished fast OPT passes.
+
+2.12. Printing statistics.
+
+=== core ===
+
+   Number of wires:                157
+   Number of wire bits:            776
+   Number of public wires:          40
+   Number of public wire bits:     306
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                144
+     $add                            1
+     $and                            5
+     $assert                         6
+     $dff                           29
+     $eq                            16
+     $gt                             2
+     $logic_not                      2
+     $mux                           65
+     $not                            5
+     $pmux                           9
+     $reduce_or                      4
+
+=== top ===
+
+   Number of wires:                  8
+   Number of wire bits:             37
+   Number of public wires:           8
+   Number of public wire bits:      37
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     core                            1
+
+=== design hierarchy ===
+
+   top                               1
+     core                            1
+
+   Number of wires:                165
+   Number of wire bits:            813
+   Number of public wires:          48
+   Number of public wire bits:     343
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                144
+     $add                            1
+     $and                            5
+     $assert                         6
+     $dff                           29
+     $eq                            16
+     $gt                             2
+     $logic_not                      2
+     $mux                           65
+     $not                            5
+     $pmux                           9
+     $reduce_or                      4
+
+2.13. Executing CHECK pass (checking for obvious problems).
+checking module core..
+checking module top..
+found and reported 0 problems.
+
+3. Executing MEMORY_NORDFF pass (extracting $dff cells from $mem).
+
+4. Executing ASYNC2SYNC pass.
+
+5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \core..
+Finding unused cells or wires in module \top..
+
+6. Executing SETUNDEF pass (replace undef values with defined constants).
+
+7. Executing OPT pass (performing simple optimizations).
+
+7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module core.
+Optimizing module top.
+
+7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\core'.
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+7.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \core..
+Finding unused cells or wires in module \top..
+
+7.5. Finished fast OPT passes.
+
+8. Executing CHECK pass (checking for obvious problems).
+checking module core..
+checking module top..
+found and reported 0 problems.
+
+9. Executing HIERARCHY pass (managing design hierarchy).
+
+9.1. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \core
+
+9.2. Analyzing design hierarchy..
+Top module:  \top
+Used module:     \core
+Removed 0 unused modules.
+Module core directly or indirectly contains formal properties -> setting "keep" attribute.
+Module top directly or indirectly contains formal properties -> setting "keep" attribute.
+
+10. Executing ILANG backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: abac39d148, CPU: user 0.20s system 0.01s
+Yosys 0.9 (git sha1 UNKNOWN, clang 10.0.1 -fPIC -Os)
+Time spent: 25% 8x opt_clean (0 sec), 20% 7x opt_expr (0 sec), ...

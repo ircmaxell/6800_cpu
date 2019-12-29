@@ -1,0 +1,40 @@
+[dumpfile] "/Users/ferrara/personal/6800_cpu/simulate.vcd"
+[dumpfile_size] 15145
+[treeopen] top.
+@22
+top.Din[7:0]
+top.core.src8_1[7:0]
+top.core.src8_2[7:0]
+top.core.src16[15:0]
+top.core.incdec16[15:0]
+top.core.end_instr_addr[15:0]
+top.core.end_instr_flag
+top.core.alu8[7:0]
+top.core.update_flag
+top.core.carry
+top.core.overflow
+top.core.negative
+top.core.zero
+top.core.half_carry
+top.core.incdec16_dir
+top.core.incdec16_write[6:0]
+top.core.src8_1_select
+top.core.src8_2_select
+top.core.alu8_write[15:0]
+top.core.alu_function
+top.core.a[7:0]
+top.core.b[7:0]
+top.core.x[7:0]
+top.core.sp[15:0]
+top.core.pc[15:0]
+top.core.tmp8[7:0]
+top.core.tmp16[15:0]
+top.core.Dout[7:0]
+top.core.Addr[15:0]
+top.core.RW
+top.core.reset_state[1:0]
+top.core.ccr[7:0]
+top.core.cycle[3:0]
+top.core.instr
+top.core.ph1_clk
+top.core.Rst
