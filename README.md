@@ -1,0 +1,3 @@
+6800 CPU implementation using Nmigen, targetting an FPGA
+
+This is just playing around, don't use this or try it at all, it will fail...
